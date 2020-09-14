@@ -1,8 +1,22 @@
 <?php
 
-/**
- * Plugin Name: My Youtube Recomendation
- */
+ /**
+     * @link                https://github.com/HenriqueNasciviVI/my_youtube_recommendation
+     * @since               1.0.0
+     * @package             My_Youtube_Recommendation
+     * 
+     * @wordpress-plugin
+     * Plugin Name:         My Youtube Recommendation
+     * Plugin URI:          https://github.com/HenriqueNasciviVI/my_youtube_recommendation
+     * Description:         Display the last videos from a Youtube channel using Youtube feed.
+     * Version:             1.0.0
+     * Author:              André Sousa
+     * Author URI:          https://github.com/HenriqueNasciviVI
+     * License:             GPLv3 or later
+     * License URI:         https://www.gnu.org/licenses/gpl-3.0.html
+     * Text Domain:         my-youtube-recommendation
+     * Domain Path:         /languages/
+     */
 
  // Plugin Version
  if (!defined('MY_YOUTUBE_RECOMMENDATION_VERSION')) {
@@ -40,7 +54,7 @@ require_once MY_YOUTUBE_RECOMMENDATION_PLUGIN_DIR . "includes/class-my-youtube-r
 require_once MY_YOUTUBE_RECOMMENDATION_PLUGIN_DIR . "includes/class-my-youtube-recommendation-widget.php";
 
 if (is_admin()) {
-   require_once MY_YOUTUBE_RECOMMENDATION_PLUGIN_DIR . "includes/class-youtube-recommendation-admin.php";
+   require_once MY_YOUTUBE_RECOMMENDATION_PLUGIN_DIR . "includes/class-my-youtube-recommendation-admin.php";
 }
 
 $my_yt_rec_admin = new My_Youtube_Recommendation_Admin(
